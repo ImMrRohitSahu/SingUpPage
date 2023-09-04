@@ -1,0 +1,246 @@
+:root {
+  --clr-primary-bg: #defcf9;
+  --clr-secondary-bg: #cca8e9;
+  --clr-box: #c3bef0;
+  --clr-font: hsl(273, 55%, 18%);
+  --clr-font-btn: #a353e4;
+
+  --fs-heading: 2rem;
+  --fs-label: .85rem;
+  --fs-input: 0.95rem;
+  --fs-input-focus: 1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--clr-font);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    150deg,
+    var(--clr-primary-bg),
+    var(--clr-secondary-bg)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  width: 65%;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    300deg,
+    var(--clr-primary-bg),
+    var(--clr-secondary-bg)
+  );
+  z-index: 2;
+  background-blend-mode: multiply
+}
+h1{
+    color: var(--clr-font-btn);
+    width: 100%;
+    height: 12%;
+    text-align: center;
+    padding: 5px 0px;
+}
+form{
+    width: 100%;
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.input-div{
+    width: 80%;
+    height: 15%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.input-div label{
+    font-size: var(--fs-label);
+    font-weight: 600;
+    padding: 3px 20px;
+}
+.input-per{
+    width: 40%;
+    height: 50%;
+    font-size: var(--fs-input);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 4px 12px;
+    text-align: center;
+    margin-left: 20px;
+    padding: 5px;
+}
+.input-per:focus{
+    background-color: transparent;
+}
+.cont-gndr-date{
+    width: 80%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    padding: 3px 20px;
+}
+.gender-div, .date-div{
+    width: 50%;
+    margin-left: 20px;
+}
+.gender, .date-div label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: var(--fs-label);
+    font-weight: 600;
+}
+#date{
+    background-color: transparent;
+    width: 80%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(221, 112, 221);
+    font-size: var(--fs-input);
+    font-weight: 600;
+}
+.gender-div label{
+    font-size: var(--fs-input);
+    font-weight: 600;
+}
+.check-div{
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    padding: 3px 40px;
+}
+.check-div label{
+    font-size: var(--fs-input);
+    font-weight: 600;
+    margin-left: 5px;
+}
+.btn-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 80%;
+    height: 10%;
+}
+.btn-div a button, .btn-div>button{
+    padding: 5px 25px;
+    border: none;
+    border-radius: 5px;
+    color: var(--clr-font);
+    font-size: var(--fs-label);
+    font-weight: 600;
+    background-color: var(--clr-secondary-bg);
+    transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+.btn-div>button{
+    padding: 5px 30px;
+}
+.btn-div button:hover{
+    background-color: var(--clr-font-btn);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+/*** Circle Design ***/
+.c-one{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(150deg, #afcfffaa, #ca7bff11);
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    top: 3%;
+    left: 3%;
+    animation: circleone 30s 1s linear infinite;
+}
+@keyframes circleone{
+    0%{
+        position: absolute;
+        left: 3%;
+        top: 3%;
+        transform: rotateZ("0deg");
+    }
+    10%{
+        position: absolute;
+        left: 0%;
+        top: 20%;
+    }
+    50%{
+        position: absolute;
+        left: 25%;
+        top: 58%;
+    }
+    80%{
+        position: absolute;
+        left: 25%;
+        top: 0%;
+    }
+    100%{
+        position: absolute;
+        left: 3%;
+        top: 3%;
+        transform: rotateZ("360deg");
+    }
+}
+.c-two{
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(245deg, #d1e4ffaa, #ca7bff11);
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    bottom: 3%;
+    right: 3%;
+    animation: circletwo 25s 1s linear infinite;
+}
+@keyframes circletwo{
+    0%{
+        position: absolute;
+        right: 3%;
+        bottom: 3%;
+        transform: rotateZ("0deg");
+    }
+    10%{
+        position: absolute;
+        right: 0%;
+        bottom: 20%;
+    }
+    50%{
+        position: absolute;
+        right: 25%;
+        bottom: 65%;
+    }
+    80%{
+        position: absolute;
+        right: 25%;
+        bottom: 0%;
+    }
+    100%{
+        position: absolute;
+        right: 3%;
+        bottom: 3%;
+        transform: rotateZ("360deg");
+    }
+}

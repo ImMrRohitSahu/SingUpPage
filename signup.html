@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Here</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="form-container">
+            <h1>SignUp Here</h1>
+            <form>
+                <div class="input-div">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="input-per" id="name" placeholder="Your Full Name" required maxlength="30" autofocus>
+
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" class="input-per" id="mobile" placeholder="Your Mobile Number" required maxlength="10">
+                </div>
+                <div class="input-div">
+                    <label for="email">Email</label>
+                    <input type="email" class="input-per" id="email" placeholder="Your Email" required maxlength="45">
+
+                    <label for="add">Address</label>
+                    <input type="text" class="input-per" id="add" placeholder="Your Address" required maxlength="100">
+                </div>
+                <div class="cont-gndr-date">
+                    <div class="gender-div">
+                        <label for="gender" class="gender">Gender</label> <br>
+                        <input type="radio" id="male" required name="gndr">
+                        <label id="male">Male</label>
+                        <input type="radio" id="female" required name="gndr">
+                        <label id="female">Female</label>
+                        <input type="radio" id="other" required name="gndr">
+                        <label id="other">Other</label>
+                    </div>
+                    <div class="date-div">
+                        <label for="date">Date Of Birth</label>
+                        <input type="date" id="date" class="date-label" required>
+                    </div>
+                </div>
+                <div class="check-div">
+                    <input type="checkbox" id="term" required>
+                    <label for="term">Accept all terms & conditions.</label>
+                </div>
+                <div class="btn-div">
+                    <a href=""><button type="button">Back</button></a>
+                    <button type="submit">Create</button>
+                </div>
+            </form>
+        </div>
+        <div class="circle c-one"></div>
+        <div class="circle c-two"></div>
+    </div>
+</body>
+</html>
